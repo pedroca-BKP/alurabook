@@ -1,0 +1,138 @@
+.cabecalho__menu-hamburguer {
+    background-image: url("../img/Menu.svg");
+    width: 30px;
+    height: 40px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: var();
+}
+
+.cabecalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 6%;
+    width: 60vw;
+    font-family: var(--fonte-principal);
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+    width: auto;
+}
+
+.lista-menu-titulo,
+.lista-menu-item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu-titulo {
+    color: var(--laranja-titulo);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+.container__botao {
+    display: none;
+}
+
+.opcoes {
+    display: none;
+}
+
+.container__titulo {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .container__titulo,
+    .container__titulo--negrito {
+        font-family: var(--fonte-secundaria);
+        font-size: 30px;
+
+    }
+
+    .container__titulo {
+        font-weight: 400;
+        display: block;
+    }
+
+    .container__titulo--negrito {
+        font-weight: 700;
+    }
+
+    .opcoes {
+        display: flex;
+        font-family: var(--fonte-principal);
+
+    }
+
+    .opcoes__item {
+        padding: 1em;
+        text-transform: uppercase;
+        font-size: 25px;
+        margin-top: 5px;
+    }
+
+    .opcoes__link {
+        text-decoration: none;
+        color: var(--preto);
+    }
+    .container__imagem-transparente {
+        display: none;
+    }
+
+    .cabecalho__menu-hamburguer {
+        display: none;
+    }
+
+    .opcoes__botao:checked~.lista-menu {
+        display: block;
+        width: auto;
+        margin-top: 2em;
+        
+    }
+    .opcoes__botao {
+        display: none;
+    }
+    
+     .lista-menu {
+        display: none;
+        position: absolute;
+        top: 6%;
+        width: 60vw;
+        font-family: var(--fonte-principal);
+        padding-left: 2em;
+
+    }
+
+    .lista-menu-titulo,
+    .lista-menu-item {
+        padding: 1em;
+        background-color: var(--branco);
+    }
+}
